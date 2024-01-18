@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting element in an array</title>
+</head>
+<script>
+    // let data = [60,30,10,70] // predefined array
+    // let newData = 50
+    // let position = 1 // position is index value
+    // console.warn(data)
+    // for(let i = data.length-1; i >=0; i--){ // reverse looping
+         
+    //     if(i>=position){
+    //         data[i+1] = data[i]
+    //         if(i==position){
+    //             data[i] = newData
+    //         }
+    //     }
+    // }
+    // console.warn(data)
+
+
+    
+    // defining the function for button
+    function insertData(){
+      let data = [10,20,40,50,60]
+      let newData = document.getElementById('newData').value
+      newData = parseInt(newData)
+      let position =document.getElementById('position').value
+      for(let i =data.length-1; i>=0; i--){
+        if(i>=position){
+            data[i+1] = data[i]
+            if( i ==position){
+                data[i]= newData
+            }
+        }
+      }
+      console.warn(data)
+    }
+
+    // splice direct function
+    // let items = [10,20,40,50]
+    //items.splice(start,delete,insertionElement)
+    //items.splice(2,0,30)
+    // output is [10,20,30,40.50]
+
+</script>
+<body>
+    <input type="text"  id="position" placeholder="enter index/position"/>
+    <input type="text" id="newData" placeholder="Enter new element"/>
+    <button onclick="insertData()" >New element</button>
+</body>
+</html>
