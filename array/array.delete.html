@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleting Array element</title>
+    <script>
+        // let data =[10,20,30,40,50,60]
+        // let position=3 // index 3=40
+        // for(let i=position; i<data.length-1;i++){
+        //     data[i]=data[i+1] // the value of the data is getting copied
+             
+        // }
+        // // fixing the lenght of data
+        // data.length = data.length-1
+        // console.warn(data)
+
+        function removeData(){
+            let data = [10,20,30,40,50,60]
+            let position=document.getElementById('position').value 
+            position = parseInt(position)
+            for(let i=position; i<data.length-1; i++){
+                data[i]=data[i+1]
+            }
+            data.length = data.length -1
+            console.warn(data)
+        }
+    </script>
+</head>
+<body>
+     
+        <input type="text" id="position" placeholder="Enter the position"/>
+        <button onclick="removeData()">Remove</button>
+     
+    
+</body>
+</html>
